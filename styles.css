@@ -13,3 +13,49 @@ COMMENT PURPLE #5356A4
 
 THIN LINE #353567
 FILTER STARRED Ideas #BFBFDD */
+
+* {
+  margin: 0;
+
+}
+
+body {
+  background-color: #EAEAF4;
+  font-family: "Open Sans";
+  width: 100vw;
+  height: 100vh;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+label, p {
+  font-weight: 300;
+}
+
+nav {
+  background-color: #1F1F3D;
+  /* height: 100%; */
+  width: 25%;
+}
+
+nav > h1 {
+  color: #E9E9F3;
+  border-bottom: 2px solid #353567;
+}
+
+nav > h2 {
+  color: #BFBFDD;
+}
+
+.show-starred-ideas-button {
+  background-color: #5356A4;
+  color: #E9E9F3;
+  border: 1px solid #353567;
+  /* border-bottom: 2px solid #353567; */
+}
+
+.nav-divider {
+  border-bottom: 2px solid #353567;
+}
