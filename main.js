@@ -14,11 +14,15 @@ window.addEventListener('keypress', checkInput);
 cardGrid.addEventListener('click', getEventId);
 
 //DATA FUNCTIONS
-function getEventId(event) {
+function getElementId(event) {
   if (event.target.name === "delete"){
-    list.splice(event.target.id, 1);
-    displayCard();
+    deleteCard(event.target.id);
   }
+}
+
+function deleteCard(index) {
+  list.splice(index, 1);
+  displayCard();
 }
 
 function processInput() {
