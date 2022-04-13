@@ -123,6 +123,10 @@ main {
   font-weight: 700;
 }
 
+.save-button-disabled {
+  background-color:#5356A4;
+}
+
 ::placeholder {
   color: #A9AAD2;
 }
