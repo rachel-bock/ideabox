@@ -3,7 +3,6 @@ var list = [];
 
 //QUERY SELECTORS
 var saveButton = document.querySelector('.save-button');
-var inputBoxes = document.querySelectorAll('.input-box');
 var inputTitle = document.querySelector('#title');
 var inputBody = document.querySelector('#body');
 var cardGrid = document.querySelector('.card-section-grid');
@@ -11,8 +10,6 @@ var cardGrid = document.querySelector('.card-section-grid');
 
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
-// inputTitle.addEventListener('click', checkInput);
-// inputBody.addEventListener('click', checkInput);
 window.addEventListener('keypress', checkInput);
 
 //DATA FUNCTIONS
@@ -28,14 +25,12 @@ function processInput() {
 }
 
 //DOM FUNCTIONS
-function checkInput(event){
-
+function checkInput(){
   if (inputTitle.value === ""  || inputBody.value === "") {
     saveButton.classList.add('save-button-disabled');
   } else if (inputTitle.value !== ""  && inputBody.value !== "") {
     saveButton.classList.remove('save-button-disabled');
   }
-
 }
 
 function displayCard() {
