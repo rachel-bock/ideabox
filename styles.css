@@ -39,21 +39,34 @@ nav {
   background-color: #1F1F3D;
   height: 100%;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 nav > h1 {
   color: #E9E9F3;
   border-bottom: 2px solid #353567;
+  margin-left: 20px;
 }
 
 nav > h2 {
   color: #BFBFDD;
+  margin-left: 20px;
 }
 
 .show-starred-ideas-button {
   background-color: #5356A4;
   color: #E9E9F3;
   border: 1px solid #353567;
+  height: 5%;
+  font-size: large;
+  font-weight: 600;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* border-bottom: 2px solid #353567; */
 }
 
@@ -92,6 +105,7 @@ main {
   color: #E9E9F3;
   margin: 15px;
   font-size: large;
+  font-weight: 700;
 }
 
 ::placeholder {
@@ -104,6 +118,7 @@ main {
   border: 2px solid #1F1F3D;
   height: 300px;
   justify-content: space-between;
+  font-size: x-large;
 }
 
 .card-top {
@@ -115,8 +130,8 @@ main {
 
 .favorite {
   background: url(assets/star.svg);
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   border: none;
 }
 .search-bar {
@@ -125,8 +140,8 @@ main {
 }
 .delete {
   background: url(assets/delete.svg);
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   border: none;
 }
 
@@ -140,8 +155,8 @@ main {
   background: url(assets/comment.svg);
   background-size: cover;
   background-color: #5356A4;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   border: none;
 }
 
@@ -170,7 +185,7 @@ label {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding: 20px;
+  padding: 40px;
 }
 
 .search-bar > button {
