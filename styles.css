@@ -150,12 +150,25 @@ main {
   width: 30px;
   border: none;
 }
+.favorite-active {
+  background: url(assets/star-active.svg);
+  height: 30px;
+  width: 30px;
+  border: none;
+}
 .search-bar {
   display: flex;
   margin: 15px;
 }
 .delete {
   background: url(assets/delete.svg);
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+
+.delete:hover {
+  background: url(assets/delete-active.svg);
   height: 40px;
   width: 40px;
   border: none;
