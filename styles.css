@@ -73,6 +73,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .search-button {
@@ -134,6 +135,11 @@ main {
   height: 25px;
   width: 25px;
   border: none;
+}
+
+.input-form > * {
+  height: 15%;
+  width: 37%;
 }
 
 .card-bottom > p {
