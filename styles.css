@@ -99,9 +99,11 @@ main {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #1F1F3D;
-  height: 10%;
-  width: 10%;
+  height: 300px;
+  justify-content: space-between;
 }
 
 .card-top {
@@ -162,6 +164,13 @@ label {
   width: 90%;
   justify-content: flex-end;
   border: 2px solid #5356A4;
+}
+
+.card-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
 }
 
 .search-bar > button {
