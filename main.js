@@ -14,15 +14,23 @@ window.addEventListener('keypress', checkInput);
 cardGrid.addEventListener('click', getEventId);
 
 //DATA FUNCTIONS
-function getElementId(event) {
+function getEventId(event) {
   if (event.target.name === "delete"){
     deleteCard(event.target.id);
+  }else if(event.target.name === "favorite") {
+    console.log(event.target.name);
+    favoriteCard(event.target);
   }
 }
 
 function deleteCard(index) {
   list.splice(index, 1);
   displayCard();
+}
+
+function favoriteCard(target) {
+  list[target.id].updateIdea();
+  updateStarredCard(target);
 }
 
 function processInput() {
@@ -37,6 +45,10 @@ function processInput() {
 }
 
 //DOM FUNCTIONS
+function updateStarredCard(target) {
+  target.classList.add("favorite-active");
+}
+
 function checkInput(){
   if (inputTitle.value === ""  || inputBody.value === "") {
     saveButton.classList.add('save-button-disabled');
@@ -50,7 +62,7 @@ function displayCard() {
   for (var i = 0; i < list.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button class="favorite" id="${i}"></button>
+        <button class="favorite" name="favorite"id="${i}"></button>
         <button id="${i}" class="delete" name="delete"></button>
       </div>
       <div class="card-middle">
@@ -62,5 +74,14 @@ function displayCard() {
         <p>Comment</p>
       </div>
     </div>`;
+  }
+  displayFavorite();
+}
+
+function displayFavorite() {
+  for (var i = 0; i < list.length; i++){
+    if(list[i].star === true){
+      list[i];
+    }
   }
 }
