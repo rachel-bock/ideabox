@@ -11,11 +11,19 @@ var cardGrid = document.querySelector('.card-section-grid');
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
 window.addEventListener('keypress', checkInput);
+cardGrid.addEventListener('click', getEventId);
 
 //DATA FUNCTIONS
+function getEventId(event) {
+  if (event.target.name === "delete"){
+    list.splice(event.target.id, 1);
+    displayCard();
+  }
+}
+
 function processInput() {
   checkInput();
-  if (saveButton.classList.contains('save-button-disabled')) { 
+  if (saveButton.classList.contains('save-button-disabled')) {
     return;
   } else {
     var newIdea = new Idea(inputTitle.value, inputBody.value);
@@ -38,8 +46,8 @@ function displayCard() {
   for (var i = 0; i < list.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button class="favorite"></button>
-        <button class="delete"></button>
+        <button class="favorite" id="${i}"></button>
+        <button id="${i}" class="delete" name="delete"></button>
       </div>
       <div class="card-middle">
         <h1>${list[i].title}</h1>
