@@ -74,12 +74,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 
 .search-button {
   background: url(assets/search.svg);
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 50%;
   background-color: #1F1F3D;
   background-position: center;
   border: none;
@@ -89,6 +90,7 @@ main {
   background-color: #1F1F3D;
   border: none;
   color: #E9E9F3;
+  margin: 5px;
 }
 
 ::placeholder {
@@ -143,10 +145,20 @@ main {
   height: 15%;
   width: 37%;
 }
+.input-form > input,.input-form > button {
+  border: 2px solid #5356A4;
+}
+label {
+  margin-bottom: .5%;
+  margin-left: -.7%;
+  display: flex;
+  align-items: flex-end;
+}
 
 .search-bar > input {
   width: 90%;
   justify-content: flex-end;
+  border: 2px solid #5356A4;
 }
 
 .search-bar > button {
