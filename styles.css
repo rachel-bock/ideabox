@@ -95,7 +95,7 @@ main {
 .input-form {
   background-color: #A9AAD2;
   color: #1F1F3D;
-  height: 42%;
+  height: 30vw;
   width:81vw;
   font-weight: 700;
   display: flex;
@@ -176,8 +176,11 @@ main {
 }
 
 .input-form > * {
-  height: 15%;
+  height: 14%;
   width: 37%;
+}
+.input-form-body {
+  height: 24%;
 }
 .input-form > input,.input-form > button {
   border: 2px solid #5356A4;
