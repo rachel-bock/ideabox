@@ -71,7 +71,7 @@ nav > h2 {
   color: #E9E9F3;
   border: 1px solid #353567;
   height: 5%;
-  font-size: x-large;
+  font-size: 24px;
   font-weight: 600;
   padding: 25px;
   padding-left: 15px;
@@ -132,6 +132,7 @@ main {
   flex-direction: column;
   border: 2px solid #1F1F3D;
   height: 300px;
+  width: 250px;
   justify-content: space-between;
   font-size: x-large;
 }
@@ -203,7 +204,7 @@ label {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding: 40px;
+  padding: 20px;
 }
 
 .search-bar > button {
