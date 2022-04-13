@@ -2,39 +2,145 @@
 <html lang="en">
   <head>
     <title>IdeaBox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <section>
+    <nav>
       <h1>IdeaBox</h1>
+      <hr style="width:100%;text-align:left;margin-left:0;height:2px;background-color:#5356A4;">
       <h2>Filter Starred Ideas</h2>
-      <button>Show Starred Ideas</button>
-    </section>
-    <section>
-      <label>Title</label>
-      <input></input>
-      <label>Body</label>
-      <input></input>
-      <button>Save</button>
-      <button></button>
-      <label>Search ideas</label>
-      <input></input>
-    </section>
-    <section>
-      <div>
-        <div>
-          <button></button>
-          <button></button>
+      <button class='show-starred-ideas-button'>Show Starred Ideas</button>
+      <hr style="width:100%;text-align:left;margin-left:0;height:2px;background-color:#5356A4;">
+      <div class='nav-divider'></div>
+    </nav>
+    <main>
+      <section class="input-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+        <label for="body">Body</label>
+        <input class='input-form-body' type="text" id="body" name="body">
+        <button class="save-button">Save</button>
+        <div class="search-bar">
+          <button class="search-button"></button>
+          <input placeholder=" Search ideas"></input>
         </div>
-        <div>
-          <h1>Idea title</h1>
-          <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+      </section>
+      <section class="cards-section card-section-grid">
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
         </div>
-        <div>
-          <button>Comment</button>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <button class="favorite"></button>
+            <button class="delete"></button>
+          </div>
+          <div class="card-middle">
+            <h1>Idea title</h1>
+            <p>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="card-bottom">
+            <button class="comment"></button>
+            <p>Comment</p>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="Idea.js"></script>
     <script src="main.js"></script>
   </body>
