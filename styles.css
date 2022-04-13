@@ -42,18 +42,22 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  text-align: left;
 }
 
 nav > h1 {
   color: #E9E9F3;
-  border-bottom: 2px solid #353567;
-  margin-left: 20px;
+  /* border-bottom: 2px solid #353567; */
+  /* margin-left: 20px; */
+  padding: 30px;
 }
 
 nav > h2 {
   color: #BFBFDD;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  padding: 30px;
+  font-size: medium;
 }
 
 .show-starred-ideas-button {
@@ -64,6 +68,7 @@ nav > h2 {
   font-size: large;
   font-weight: 600;
   padding: 15px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
