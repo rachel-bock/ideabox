@@ -16,7 +16,7 @@ cardGrid.addEventListener('click', getEventId);
 //DATA FUNCTIONS
 function getEventId(event) {
   if (event.target.name === "delete"){
-    deleteCard(event.target.id);
+    deleteCard(event.target.value);
   } else if (event.target.name === "favorite") {
     favoriteCard(event.target);
   }
@@ -28,7 +28,7 @@ function deleteCard(index) {
 }
 
 function favoriteCard(target) {
-  list[target.id].updateIdea();
+  list[target.value].updateIdea();
   updateStarredCard(target);
 }
 
@@ -69,8 +69,8 @@ function displayCard() {
   for (var i = 0; i < list.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button ${determineClass(list[i])} name="favorite""></button>
-        <button class="delete" name="delete"></button>
+        <button ${determineClass(list[i])} name="favorite" value="${i}"></button>
+        <button class="delete" name="delete" value="${i}"></button>
       </div>
       <div class="card-middle">
         <h1>${list[i].title}</h1>
