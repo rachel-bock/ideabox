@@ -6,12 +6,14 @@ var saveButton = document.querySelector('.save-button');
 var inputTitle = document.querySelector('#title');
 var inputBody = document.querySelector('#body');
 var cardGrid = document.querySelector('.card-section-grid');
+var showStarredIdeas = document.querySelector('.show-starred-ideas-button');
 
 
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
-window.addEventListener('keypress', checkInput);
+window.addEventListener('keydown', checkInput);
 cardGrid.addEventListener('click', getEventId);
+showStarredIdeas.addEventListener('click', filterStarredIdeas);
 
 //DATA FUNCTIONS
 function getEventId(event) {
@@ -22,9 +24,18 @@ function getEventId(event) {
   }
 }
 
+function filterStarredIdeas() {
+  if (showStarredIdeas.innerText === 'Show Starred Ideas') {
+    displayCard(list.filter(idea => idea.star));
+  } else {
+    displayCard(list);
+  }    
+  updateStarredButton();
+}
+
 function deleteCard(index) {
   list.splice(index, 1);
-  displayCard();
+  displayCard(list);
 }
 
 function favoriteCard(target) {
@@ -39,13 +50,21 @@ function processInput() {
   } else {
     var newIdea = new Idea(inputTitle.value, inputBody.value);
     list.push(newIdea);
-    displayCard();
+    displayCard(list);
   }
 }
 
 //DOM FUNCTIONS
 function updateStarredCard(target) {
   target.classList.toggle("favorite-active");
+}
+
+function updateStarredButton() {
+  if (showStarredIdeas.innerText === 'Show All Ideas') {
+    showStarredIdeas.innerText = 'Show Starred Ideas';
+  } else {
+    showStarredIdeas.innerText = 'Show All Ideas';
+  }
 }
 
 function checkInput(){
@@ -64,17 +83,17 @@ function determineClass(element) {
   }
 }
 
-function displayCard() {
+function displayCard(cards) {
   cardGrid.innerHTML = "";
-  for (var i = 0; i < list.length; i++) {
+  for (var i = 0; i < cards.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button ${determineClass(list[i])} name="favorite" value="${i}"></button>
+        <button ${determineClass(cards[i])} name="favorite" value="${i}"></button>
         <button class="delete" name="delete" value="${i}"></button>
       </div>
       <div class="card-middle">
-        <h1>${list[i].title}</h1>
-        <p>${list[i].body}</p>
+        <h1>${cards[i].title}</h1>
+        <p>${cards[i].body}</p>
       </div>
       <div class="card-bottom">
         <button class="comment"></button>
