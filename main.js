@@ -46,7 +46,7 @@ function processInput() {
 
 //DOM FUNCTIONS
 function updateStarredCard(target) {
-  target.classList.add("favorite-active");
+  target.classList.toggle("favorite-active");
 }
 
 function checkInput(){
@@ -57,12 +57,20 @@ function checkInput(){
   }
 }
 
+function determineClass(element) {
+  if (element.star) {
+    return 'class="favorite favorite-active"';
+  } else {
+    return 'class="favorite"';
+  }
+}
+
 function displayCard() {
   cardGrid.innerHTML = "";
   for (var i = 0; i < list.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button class="favorite" name="favorite"id="${i}"></button>
+        <button ${determineClass(list[i])} name="favorite"id="${i}"></button>
         <button id="${i}" class="delete" name="delete"></button>
       </div>
       <div class="card-middle">
@@ -74,14 +82,5 @@ function displayCard() {
         <p>Comment</p>
       </div>
     </div>`;
-  }
-  displayFavorite();
-}
-
-function displayFavorite() {
-  for (var i = 0; i < list.length; i++){
-    if(list[i].star === true){
-      list[i];
-    }
   }
 }
