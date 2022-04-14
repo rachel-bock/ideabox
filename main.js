@@ -17,8 +17,7 @@ cardGrid.addEventListener('click', getEventId);
 function getEventId(event) {
   if (event.target.name === "delete"){
     deleteCard(event.target.id);
-  }else if(event.target.name === "favorite") {
-    console.log(event.target.name);
+  } else if (event.target.name === "favorite") {
     favoriteCard(event.target);
   }
 }
@@ -50,9 +49,9 @@ function updateStarredCard(target) {
 }
 
 function checkInput(){
-  if (inputTitle.value === ""  || inputBody.value === "") {
+  if (inputTitle.value === "" || inputBody.value === "") {
     saveButton.classList.add('save-button-disabled');
-  } else if (inputTitle.value !== ""  && inputBody.value !== "") {
+  } else if (inputTitle.value !== "" && inputBody.value !== "") {
     saveButton.classList.remove('save-button-disabled');
   }
 }
@@ -70,8 +69,8 @@ function displayCard() {
   for (var i = 0; i < list.length; i++) {
     cardGrid.innerHTML += `<div id="${i}" class="card">
       <div class="card-top">
-        <button ${determineClass(list[i])} name="favorite"id="${i}"></button>
-        <button id="${i}" class="delete" name="delete"></button>
+        <button ${determineClass(list[i])} name="favorite""></button>
+        <button class="delete" name="delete"></button>
       </div>
       <div class="card-middle">
         <h1>${list[i].title}</h1>
