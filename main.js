@@ -11,7 +11,7 @@ var showStarredIdeas = document.querySelector('.show-starred-ideas-button');
 
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
-window.addEventListener('keypress', checkInput);
+window.addEventListener('keydown', checkInput);
 cardGrid.addEventListener('click', getEventId);
 showStarredIdeas.addEventListener('click', filterStarredIdeas);
 
@@ -25,7 +25,12 @@ function getEventId(event) {
 }
 
 function filterStarredIdeas() {
-  displayCard(list.filter(idea => idea.star));
+  if (showStarredIdeas.innerText === 'Show Starred Ideas') {
+    displayCard(list.filter(idea => idea.star));
+  } else {
+    displayCard(list);
+  }    
+  updateStarredButton();
 }
 
 function deleteCard(index) {
@@ -52,6 +57,14 @@ function processInput() {
 //DOM FUNCTIONS
 function updateStarredCard(target) {
   target.classList.toggle("favorite-active");
+}
+
+function updateStarredButton() {
+  if (showStarredIdeas.innerText === 'Show All Ideas') {
+    showStarredIdeas.innerText = 'Show Starred Ideas';
+  } else {
+    showStarredIdeas.innerText = 'Show All Ideas';
+  }
 }
 
 function checkInput(){
