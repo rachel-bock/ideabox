@@ -9,7 +9,6 @@ var cardGrid = document.querySelector('.card-section-grid');
 var showStarredIdeas = document.querySelector('.show-starred-ideas-button');
 var searchInput = document.querySelector('#search-input');
 
-
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
 window.addEventListener('keydown', checkInput);
