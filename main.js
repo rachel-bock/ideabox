@@ -7,6 +7,7 @@ var inputTitle = document.querySelector('#title');
 var inputBody = document.querySelector('#body');
 var cardGrid = document.querySelector('.card-section-grid');
 var showStarredIdeas = document.querySelector('.show-starred-ideas-button');
+var searchInput = document.querySelector('#search-input');
 
 
 //EVENT LISTENERS
@@ -14,6 +15,7 @@ saveButton.addEventListener('click', processInput);
 window.addEventListener('keydown', checkInput);
 cardGrid.addEventListener('click', getEventId);
 showStarredIdeas.addEventListener('click', filterStarredIdeas);
+searchInput.addEventListener('keyup', searchIdeas);
 
 //DATA FUNCTIONS
 function getEventId(event) {
@@ -29,7 +31,7 @@ function filterStarredIdeas() {
     displayCard(list.filter(idea => idea.star));
   } else {
     displayCard(list);
-  }    
+  }
   updateStarredButton();
 }
 
@@ -54,6 +56,10 @@ function processInput() {
   }
 }
 
+function searchIdeas() {
+  displayCard(list.filter(idea => idea.title.includes(searchInput.value) || idea.body.includes(searchInput.value)));
+}
+
 //DOM FUNCTIONS
 function updateStarredCard(target) {
   target.classList.toggle("favorite-active");
@@ -67,7 +73,7 @@ function updateStarredButton() {
   }
 }
 
-function checkInput(){
+function checkInput() {
   if (inputTitle.value === "" || inputBody.value === "") {
     saveButton.classList.add('save-button-disabled');
   } else if (inputTitle.value !== "" && inputBody.value !== "") {
