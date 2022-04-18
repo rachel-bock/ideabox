@@ -14,7 +14,6 @@ html {
 
 body {
   background-color: #EAEAF4;
-  font-family: "Open Sans";
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -40,7 +39,6 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
 }
 
 nav > h1 {
@@ -85,13 +83,12 @@ main {
 .input-form {
   background-color: #A9AAD2;
   color: #1F1F3D;
-  height: 30vw;
+  height: 50vh;
   width: 81vw;
   font-weight: 700;
   font-size: large;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: space-around;
 }
@@ -107,7 +104,6 @@ main {
 
 .save-button {
   background-color: #1F1F3D;
-  border: none;
   color: #E9E9F3;
   margin: 15px;
   font-size: x-large;
@@ -155,7 +151,7 @@ main {
   background: #A9AAD2;
 }
 
-.show-starred-ideas-button:hover, .save-button:hover,
+.show-starred-ideas-button:hover,
 .favorite:hover, .delete:hover {
   cursor: pointer;
 }
