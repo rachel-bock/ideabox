@@ -11,7 +11,7 @@ var searchInput = document.querySelector('#search-input');
 
 //EVENT LISTENERS
 saveButton.addEventListener('click', processInput);
-window.addEventListener('keydown', checkInput);
+window.addEventListener('keyup', checkInput);
 cardGrid.addEventListener('click', getEventId);
 showStarredIdeas.addEventListener('click', filterStarredIdeas);
 searchInput.addEventListener('keyup', searchIdeas);
