@@ -16,6 +16,7 @@ FILTER STARRED Ideas #BFBFDD */
 
 * {
   margin: 0;
+  font-family: "Open Sans";
 }
 
 hr {
@@ -43,7 +44,7 @@ p {
   font-weight: 300;
 }
 
-input {
+input, textarea {
   font-size: large;
 }
 
