@@ -111,9 +111,7 @@ function displayCard(cards) {
         <h1>${cards[i].title}</h1>
         <p>${cards[i].body}</p>
       </div>
-      <div class="card-bottom">
-        <button class="comment"></button>
-        <p>Comment</p>
+      <div>
       </div>
     </div>`;
   }
