@@ -1,22 +1,6 @@
-/* Header Text: Open Sans, Bold
-Body and Label Text: Open Sans, Light
-
-BACKGROUNDS
-DARK VIOLET #1F1F3D
-LILAC #A9AAD2
-LIGHT LILAC #EAEAF4
-
-IDEABOX STUFF
-WHITE #FFFFFF
-SLIGHT WHITE COLOR OF TEXT #E9E9F3
-COMMENT PURPLE #5356A4
-
-THIN LINE #353567
-FILTER STARRED Ideas #BFBFDD */
-
 * {
   margin: 0;
-  /* border: 2px solid red; */
+  font-family: "Open Sans";
 }
 
 hr {
@@ -30,7 +14,6 @@ html {
 
 body {
   background-color: #EAEAF4;
-  font-family: "Open Sans";
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -44,6 +27,10 @@ p {
   font-weight: 300;
 }
 
+input, textarea {
+  font-size: large;
+}
+
 nav {
   background-color: #1F1F3D;
   height: 100%;
@@ -52,13 +39,12 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: left;
 }
 
 nav > h1 {
   color: #E9E9F3;
   padding: 17px;
-  padding-top:30px;
+  padding-top: 30px;
 }
 
 nav > h2 {
@@ -97,12 +83,12 @@ main {
 .input-form {
   background-color: #A9AAD2;
   color: #1F1F3D;
-  height: 30vw;
-  width:81vw;
+  height: 50vh;
+  width: 81vw;
   font-weight: 700;
+  font-size: large;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: space-around;
 }
@@ -118,16 +104,15 @@ main {
 
 .save-button {
   background-color: #1F1F3D;
-  border: none;
   color: #E9E9F3;
   margin: 15px;
-  font-size: large;
+  font-size: x-large;
   font-weight: 700;
   cursor: pointer;
 }
 
 .save-button-disabled {
-  background-color:#5356A4;
+  background-color: #5356A4;
   cursor: not-allowed;
 }
 
@@ -143,6 +128,7 @@ main {
   width: 250px;
   justify-content: space-between;
   font-size: x-large;
+  background-color: white;
 }
 
 .card-top {
@@ -150,6 +136,24 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-middle {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.scrollbar-background::-webkit-scrollbar {
+  background-color: white;
+}
+
+.scrollbar-background::-webkit-scrollbar-thumb {
+  background: #A9AAD2;
+}
+
+.show-starred-ideas-button:hover,
+.favorite:hover, .delete:hover {
+  cursor: pointer;
 }
 
 .favorite {
@@ -164,6 +168,10 @@ main {
   height: 30px;
   width: 30px;
   border: none;
+}
+
+.favorite:hover {
+  background: url(assets/star-active.svg);
 }
 
 .search-bar {
@@ -214,8 +222,8 @@ main {
 }
 
 label {
-  margin-bottom: .5%;
-  margin-left: -.7%;
+  margin-bottom: 0.5%;
+  margin-left: -0.7%;
   display: flex;
   align-items: flex-end;
   margin-top: -2%;
