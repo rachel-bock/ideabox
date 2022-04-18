@@ -16,7 +16,6 @@ FILTER STARRED Ideas #BFBFDD */
 
 * {
   margin: 0;
-  /* border: 2px solid red; */
 }
 
 hr {
@@ -42,6 +41,10 @@ h1, h2 {
 
 p {
   font-weight: 300;
+}
+
+input {
+  font-size: large;
 }
 
 nav {
@@ -98,8 +101,9 @@ main {
   background-color: #A9AAD2;
   color: #1F1F3D;
   height: 30vw;
-  width:81vw;
+  width: 81vw;
   font-weight: 700;
+  font-size: large;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,7 +125,7 @@ main {
   border: none;
   color: #E9E9F3;
   margin: 15px;
-  font-size: large;
+  font-size: x-large;
   font-weight: 700;
   cursor: pointer;
 }
@@ -143,6 +147,7 @@ main {
   width: 250px;
   justify-content: space-between;
   font-size: x-large;
+  
 }
 
 .card-top {
