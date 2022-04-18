@@ -81,8 +81,10 @@ function updateStarredButton() {
 function checkInput() {
   if (inputTitle.value === "" || inputBody.value === "") {
     saveButton.classList.add('save-button-disabled');
+    saveButton.disabled = true;
   } else if (inputTitle.value !== "" && inputBody.value !== "") {
     saveButton.classList.remove('save-button-disabled');
+    saveButton.disabled = false;
   }
 }
 
