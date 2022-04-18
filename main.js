@@ -36,7 +36,11 @@ function filterStarredIdeas() {
 
 function deleteCard(index) {
   list.splice(index, 1);
-  displayCard(list);
+  if (showStarredIdeas.innerText === 'Show All Ideas') {
+    displayCard(list.filter(idea => idea.star));
+  } else {
+    displayCard(list);
+  }  
 }
 
 function favoriteCard(target) {
