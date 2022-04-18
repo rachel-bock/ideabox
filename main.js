@@ -68,6 +68,9 @@ function searchIdeas() {
 //DOM FUNCTIONS
 function updateStarredCard(target) {
   target.classList.toggle("favorite-active");
+  if (showStarredIdeas.innerText === 'Show All Ideas') {
+    displayCard(list.filter(idea => idea.star));
+  }
 }
 
 function updateStarredButton() {
