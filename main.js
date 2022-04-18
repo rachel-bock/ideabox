@@ -55,6 +55,8 @@ function processInput() {
   } else {
     var newIdea = new Idea(inputTitle.value, inputBody.value);
     list.push(newIdea);
+    inputTitle.value = null;
+    inputBody.value = null;
     displayCard(list);
   }
 }
