@@ -19,7 +19,7 @@ IdeaBox is here to help you brainstorm those ideas and make them a reality! 💡
 ### About Us
 We used paired and group programming to implement functionality in this project. Through our communication we were able to agree on the process to build this project 👏.
 
-Part of our collaboration included coming up with the team name 🍖 RIB 🍖!
+Part of our collaboration included coming up with the team name 🍖 RIB 🍖! To coordinate our collaboration, we utilized the GitHub project [board](https://github.com/rachel-bock/ideabox/projects/1).
 
 ### Technologies
 - JavaScript
