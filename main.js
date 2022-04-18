@@ -40,7 +40,7 @@ function deleteCard(index) {
     displayCard(list.filter(idea => idea.star));
   } else {
     displayCard(list);
-  }  
+  }
 }
 
 function favoriteCard(target) {
@@ -107,7 +107,7 @@ function displayCard(cards) {
         <button ${determineClass(cards[i])} name="favorite" value="${i}"></button>
         <button class="delete" name="delete" value="${i}"></button>
       </div>
-      <div class="card-middle">
+      <div class="card-middle scrollbar-background">
         <h1>${cards[i].title}</h1>
         <p>${cards[i].body}</p>
       </div>

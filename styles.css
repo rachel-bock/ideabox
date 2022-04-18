@@ -147,7 +147,7 @@ main {
   width: 250px;
   justify-content: space-between;
   font-size: x-large;
-  
+  background-color: white;
 }
 
 .card-top {
@@ -157,7 +157,20 @@ main {
   align-items: center;
 }
 
-.show-starred-ideas-button:hover, .save-button:hover, 
+.card-middle {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.scrollbar-background::-webkit-scrollbar {
+  background-color: white;
+}
+
+.scrollbar-background::-webkit-scrollbar-thumb {
+  background: #A9AAD2;
+}
+
+.show-starred-ideas-button:hover, .save-button:hover,
 .favorite:hover, .delete:hover {
   cursor: pointer;
 }
